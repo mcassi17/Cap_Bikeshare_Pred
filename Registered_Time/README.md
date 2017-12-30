@@ -1,6 +1,6 @@
 
 # All Riders
-The overall goal of this project was to predict the ride time on a Capital Bikeshare bike based on the start/end stations, weather, and other categorical data. 
+The initial goal of the project was to predict the ride times using the registered riders and casual riders together. The model that was produced for that did not perform as well as hoped, so the data was split into casual and registered.
 
 ## Models Used and Evaluation Criteria
 The regression models used to predict the ride time of a Capital Bikeshare rides were Random Forests, Logisitc Regression, Elastic Net Regression, LassoRegression, and Ridge Regression. 
