@@ -22,6 +22,8 @@ Different variations of random forests, logistic regressions, and linear support
 The Linear Support Vector Machines performed slightly better than the Logistic Regression when it comes to ROC scores (.69 to .73). The SVM models did do well when it came to accuracy (~84%) but it was lower than the Logistic Regression models and the Random Forests. The models also had issues with classifying casual riders like the Logistic Regression and Random Forest models. 
 <br><br>
 The Random Forests did fairly well when it came to accuracy (~87%) and one model had a training accuracy of 99%. This model had the highest ROC score at .75 but it was overfit as the test accuracy was only 86%. The remaining models had ROC scores between .69 and .73. The precision and recall values were similar to the precision and recall values for the final model but these models did not predict casual riders as well as the final model.
+<br><br>
+In addition to these models, an Ensemble of Logistic Regression models was used too. To build the ensemble, the data was split into X and y datasets and then split into train and test sets. The train sets were then randomly sampled 11 times so that the number of casual riders was equal to the number of registered riders (125k). 11 models were trained and used to generate 11 different sets of predictions. These predictions were then used to generate the final predictions by using a majority vote. This model did not perform well compared to the other models. The accuracy was only 81%, the precision was .86, and the recall was .82, which are lower than the other models.
 
 
 ```python
